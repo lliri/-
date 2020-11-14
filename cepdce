@@ -1,0 +1,8 @@
+size(400, 400)
+noStroke()
+fill("#F50C00")
+ellipse(185, 185, 30, 30)
+ellipse(200, 185, 30, 30)
+translate(192,178)
+rotate(radians(45))
+rect(0,0, 25, 25)
