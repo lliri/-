@@ -17,3 +17,9 @@ def mouseClicked():
         fill("#000000")
     if mouseButton == RIGHT:
         fill(125,122,122)
+    if cl == 100:
+        text( "win", 100,100)
+    if cl == 120:
+        cl = 0
+    if cl == 1:
+        text("Super infiniti clicker", 30, 200)
