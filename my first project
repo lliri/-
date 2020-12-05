@@ -1,0 +1,19 @@
+cl = 0
+def setup():
+    size(400, 400)
+    fill("#907F7F")
+    noStroke
+def draw():
+    global cl
+    textSize(20)
+    text(cl ,30,30)
+    rect(200, 200,100, 100)
+def mouseClicked():
+    global cl
+    mousePressed
+    if mouseButton == LEFT:
+        cl += 1
+    if mouseButton == LEFT:
+        fill("#000000")
+    if mouseButton == RIGHT:
+        fill(125,122,122)
