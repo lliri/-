@@ -1,10 +1,14 @@
 cl = 0
 def setup():
     size(400, 400)
-    fill("#907F7F")
     noStroke
 def draw():
+    background(0,random(0,255),random(0,255))
     global cl
+    if cl == 1:
+        text("your eye die", 30, 200)
+    if cl == 99:
+        text( "win", 100,100)
     textSize(20)
     text(cl ,30,30)
     rect(200, 200,100, 100)
@@ -19,9 +23,6 @@ def mouseClicked():
         fill("#000000")
     if mouseButton == RIGHT:
         fill(125,122,122)
-    if cl == 99:
-        text( "win", 100,100)
+
     if cl == 100:
         cl = 0
-    if cl == 1:
-        text("Super infiniti clicker", 30, 200)
