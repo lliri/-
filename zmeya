@@ -1,0 +1,19 @@
+x=200
+y=200
+def setup():
+    size(400,400)
+def draw():
+    global x,y
+    rect(x,y,50,50)#квадрат
+    rect(0,350,50,50)#кнопка
+    rect(50,350,50,50)
+    rect(100,350,50,50)
+    rect(50,300,50,50)
+    if mousePressed and mouseButton == (LEFT) and mouseX>0 and mouseX<0+50 and mouseY>350 and mouseY<350+50:
+        x-=1
+    if mousePressed and mouseButton == (LEFT) and mouseX>50 and mouseX<50+50 and mouseY>350 and mouseY<350+50:
+        y+=1
+    if mousePressed and mouseButton == (LEFT) and mouseX>100 and mouseX<100+50 and mouseY>350 and mouseY<350+50:
+        x+=1
+    if mousePressed and mouseButton == (LEFT) and mouseX>50 and mouseX<50+50 and mouseY>300 and mouseY<300+50:
+        y-=1
