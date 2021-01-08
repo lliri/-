@@ -2,6 +2,7 @@ x=200
 y=200
 def setup():
     size(400,400)
+    noStroke()
 def draw():
     global x,y
     rect(x,y,50,50)#квадрат
@@ -10,6 +11,9 @@ def draw():
     rect(100,350,50,50)#кнопка3
     rect(50,300,50,50)#кнопка4
     rect(350,350,50,50)#рестарт
+    rect(350,300,50,50)
+    if mousePressed and mouseButton == (LEFT) and mouseX>350 and mouseX<350+50 and mouseY>300 and mouseY<300+50:
+        fill(random(0,255),random(0,255),random(0,255))
     if mousePressed and mouseButton == (LEFT) and mouseX>0 and mouseX<0+50 and mouseY>350 and mouseY<350+50:
         x-=1
     if mousePressed and mouseButton == (LEFT) and mouseX>50 and mouseX<50+50 and mouseY>350 and mouseY<350+50:
