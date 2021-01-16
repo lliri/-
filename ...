@@ -6,3 +6,15 @@ def draw():
         point(random(0,400),random(0,400))
     if mouseButton == LEFT:
         background(255,255,255)
+
+
+
+
+x=250
+n=20
+def setup():
+    size(500,500)
+def draw():
+    global x,n
+    for y in range(200,40,-6):
+        circle(250,250,y)
