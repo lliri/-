@@ -1,0 +1,8 @@
+def setup():
+    size(400,400)
+    strokeWeight(2)
+def draw():
+    for x in range(100):
+        point(random(0,400),random(0,400))
+    if mouseButton == LEFT:
+        background(255,255,255)
