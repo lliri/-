@@ -1,0 +1,11 @@
+def sqar(x):
+    sum = 0;
+    for i in x:
+        sum = i
+    return sum
+def setup():
+    size(400,400)
+    textSize(50)
+def draw():
+    fill(0)
+    text(sqar([1,2,3,4,6,-1]), 200,200)
