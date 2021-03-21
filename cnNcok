@@ -1,0 +1,29 @@
+#    0 1 2 3 4
+lst=["monday" , "tusday" , "thrirthday" , "thursday" , "friday "]
+
+index = 0
+
+def setup():
+    size(500,500)
+def draw():
+    background(255)
+    global lst,index
+    fill(0)
+    stroke(0)
+    strokeWeight(200)
+    if index > 4:
+        index=0
+    if index < 0:
+        index=4
+
+    for i in range(len(lst)):
+        fill(0)
+        if index == i:
+            fill("#FCF50D")
+        text(lst[i] ,250,250+i*20)
+def keyPressed():
+    global index
+    if keyCode == RIGHT:
+        index+=1
+    if keyCode == LEFT:
+        index-=1
