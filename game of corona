@@ -25,7 +25,7 @@ class cpritz:
 
 def setup():
     global chel,cp
-
+    fill(0)
     chel=chelovek(200,200)
     cp=cpritz(300,300)
     size(400,400)
