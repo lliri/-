@@ -12,8 +12,8 @@ class chelovek:
     def cheldraw(self):
         image(self.img ,self.x,self.y,50,50)
     def randomPos(self):
-        self.x=random(0,350)
-        self.y=random(0,350)
+        self.x=random(50,750)
+        self.y=random(50,550)
 class cpritz:
     def __init__(self,x,y):
         self.x=x
@@ -28,7 +28,7 @@ def setup():
     fill(0)
     chel=chelovek(200,200)
     cp=cpritz(300,300)
-    size(400,400)
+    size(800,600)
 def draw():
 
     background(255)
