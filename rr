@@ -1,0 +1,16 @@
+class cpritz:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def drsp(self):
+        rect(mouseX,mouseY,30,60)
+        loadImage(sp.png)
+
+            
+cp=cpritz(300,300)
+
+def setup():
+    size(400,400)
+def draw():
+    background(255)
+    cp.drsp()
