@@ -91,6 +91,14 @@ def draw():
     pl = player(mouseX-150,mouseY-150)
     textSize(50)
     global x,y,dx,dy,vdsa,state
+    if key == " ":
+        state=3
+    if state==3:
+        background(255,0,0)
+        text("pause",350,350)
+    if state==3 and key=="e":
+        state=1
+    
     
     if (state == 1):
         background(255)
