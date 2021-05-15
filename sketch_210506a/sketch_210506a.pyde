@@ -7,8 +7,8 @@ class player:
         self.img=loadImage("player.png")
     def play(self):
         if mousePressed and mouseButton == RIGHT:
-            fill(255,0,0)
-            rect(self.x,self.y,300,300)
+            fill(255)
+            rect(self.x+75,self.y+75,150,150)
         image(self.img,mouseX-75,mouseY-75,self.w,self.h)
 class Vrag:
     def __init__(self):
@@ -82,8 +82,7 @@ def collideRects(x,y,w,h , x1,y1,w1,h1):
 state  = 0
 def setup():
     global vdsa
-    pl = player(mouseX-150,mouseY-150)
-    vdsa=loadImage("start.png")
+    pl = player(mouseX,mouseY)
     init()
     size(800,800)
     frameRate(1000)
@@ -92,11 +91,11 @@ def draw():
     textSize(50)
     global x,y,dx,dy,vdsa,state
     if key == " ":
-        state=3
-    if state==3:
+        state=2
+    if state==2:
         background(255,0,0)
         text("pause",350,350)
-    if state==3 and key=="e":
+    if state==2 and keyCode=="1":
         state=1
     
     
@@ -122,4 +121,7 @@ def mouseClicked():
     global state
     if state == 0:
         state = 1
+        init()
+    if state==2:
+        state=1
         init()
