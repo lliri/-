@@ -8,7 +8,7 @@ class player:
     def play(self):
         if mousePressed and mouseButton == RIGHT:
             fill(255)
-            rect(self.x+75,self.y+75,150,150)
+            rect(self.x+100,self.y+100,100,150)
         image(self.img,mouseX-75,mouseY-75,self.w,self.h)
 class Vrag:
     def __init__(self):
@@ -110,7 +110,7 @@ def draw():
         for vr in vrags:
             vr.drvr()
             vr.move() 
-            if ( collideRects( vr.x,vr.y,150,150  , mouseX-75,mouseY-75,pl.w,pl.h)) :
+            if ( collideRects( vr.x,vr.y,150,150  , mouseX-75,mouseY-50,pl.w,pl.h)) :
                 state = 0
             
             
