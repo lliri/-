@@ -3,7 +3,7 @@ class player:
         self.x=x
         self.y=y
         self.w=150
-        self.h=150
+        self.h=150 
         self.img=loadImage("player.png")
     def play(self):
         if mousePressed and mouseButton == RIGHT:
@@ -80,16 +80,20 @@ def collideRects(x,y,w,h , x1,y1,w1,h1):
     return collide(x,y,w,h , x1,y1) or collide(x,y,w,h , x1+w1,y1) or collide(x,y,w,h , x1,y1+h1) or collide(x,y,w,h , x1+w1,y1+h1)
     
 state  = 0
+t=0
+cou=0
 def setup():
     global vdsa
     pl = player(mouseX,mouseY)
     init()
     size(800,800)
-    frameRate(1000)
+    frameRate(60)
 def draw():
+    if mouseButton and mousePressed != RIGHT:
+        fill(255)
     pl = player(mouseX-150,mouseY-150)
     textSize(50)
-    global x,y,dx,dy,vdsa,state
+    global x,y,dx,dy,vdsa,state,cou,t
     if key == " ":
         state=2
     if state==2:
@@ -114,8 +118,12 @@ def draw():
     elif (state == 0 ):
         background(255,0,0)
         text("start game",300,400)
-
         
+    cou+=1
+    if cou>=60:
+        t+=1
+        cou=0
+    text(t,100,100)
     
 def mouseClicked():
     global state
