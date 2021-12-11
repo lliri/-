@@ -1,0 +1,53 @@
+import keyboard
+import time
+import random
+z=0
+a=random.randint(0,7)
+x=0
+s=4
+v=random.randint(0,7)
+c=random.randint(0,7)
+k=0
+while k==0:
+    time.sleep(1)
+    pole=[['0','0','0','0','0','0','0','0'],
+          ['0','0','0','0','0','0','0','0'],
+          ['0','0','0','0','0','0','0','0'],
+          ['0','0','0','0','0','0','0','0'],
+          ['0','0','0','0','0','0','0','0']]
+    pole[z][a]='-'
+    pole[z-1][a]='0'
+    pole[z][c]='-'
+    pole[z-1][c]='0'
+    pole[z][v]='-'
+    pole[z-1][v]='0'
+    pole[s][x]='x'
+    pole[s][x-1]='0'
+    pole[s][x+1]='0'
+    if x == v and z==4:
+       k+=1
+    if x == a and z==4:
+       k+=1
+    if x == c and z==4:
+       k+=1
+    if x==7:
+        x=1
+    if x==0:
+        x=6
+    if z == 4:
+        z=0
+        a=random.randint(0,7)
+    if (keyboard.is_pressed ( 'left')):
+        x-=1
+        if x==0 and (keyboard.is_pressed ( 'left')):
+            x=0
+    if (keyboard.is_pressed ( 'right')):
+        x+=1
+        if x==7 and (keyboard.is_pressed ( 'right')):
+            x=7
+    for i in pole:
+        for j in i:
+            print(j, end =' ')
+        print()
+    print()
+    z+=1
