@@ -1,0 +1,38 @@
+class Student():
+    
+    def __init__(self, n, a, u):
+        self.name=n
+        self.group=a
+        self.us=u
+        
+    def info(self):
+        print('Есть',self.name,'который сейчас в',self.group,'группе,и его средний бал',self.us)
+    
+#pers=Student()
+pers1=Student('Max', '3', 4.89)
+pers2=Student('Жанна', '2', 4.67)
+pers3=Student('Лена', '3', 3.99)
+pers4=Student('Алекс', '1', 4.83)
+pers5=Student('Лёша', '2', 4.93)
+pers6=Student('Яна', '2', 4.78)
+pers7=Student('Коля', '1', 4.88)
+pers8=Student('Вика', '3', 4.64)
+pers9=Student('Настя', '1', 4.67)
+pers10=Student('Кирилл', '2', 5)
+
+f=[]
+f.append(pers1)
+f.append(pers2)
+f.append(pers3)
+f.append(pers4)
+f.append(pers5)
+f.append(pers6)
+f.append(pers7)
+f.append(pers8)
+f.append(pers9)
+f.append(pers10)
+#print('Привет,я',pers.name,',обучаюсь в',pers.group,',моя успеваемость',pers.us,)
+for i in range(len(f)):
+    if f[i].us >= 4:
+        f[i].info()
+
