@@ -1,0 +1,35 @@
+x=0
+q=0
+w=0
+e=0
+r=0
+z=0
+persik = {'имя':'Лёша','возраст':'15 лет','пол':'Мужской','расса':'Эльф','навык':'Стрельба из лука'}
+for key in persik:
+    print(key,":",persik[key])
+while True:
+    print('Хотите что-нибудь изменить?')
+    z=input()
+    if z == 'да':
+        print('Что изменить?')
+        z=input()
+        if z=='имя':
+            x=input()
+            persik['имя'] = x
+        if z=='возраст':
+            q=input()
+            persik['возраст'] = q
+        if z=='пол':
+            w=input()
+            persik['пол'] = w
+        if z=='расса':
+            e=input()
+            persik['расса'] = e
+        if z=='навык':
+            r=input()
+            persik['навык'] = r
+    else:
+        print('ну ладно')
+        break
+    for key in persik:
+        print(key,":",persik[key])
