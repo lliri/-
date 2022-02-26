@@ -1,0 +1,9 @@
+x = ['cat','dog','lion','elephant','crocodile','bird']
+y = ['кот','собака','лев','слон','крокодил','птица']
+while True:
+    a=input()
+    for i in range(len(x)):
+        if a == x[i]:
+            print(y[i])
+        if a == y[i]:
+            print(x[i])
