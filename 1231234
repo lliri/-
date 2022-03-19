@@ -1,0 +1,12 @@
+from tkinter import*
+import tkinter.font as tkFont
+from tkinter.ttk import Radiobutton
+window = Tk()
+window.title('critic error404')
+window.geometry('1080x720') 
+l=Label(window,text='5687j,gcmv', font=('Comic Sans MS', 10))
+#l.pack()
+l.grid(column=0,row = 1)
+rad=Radiobutton(window,text='кнг', value=1)
+rad.grid(column=0,row = 2)
+window.mainloop()
