@@ -30,7 +30,7 @@ if x==12:
 window = Tk()
 window.title('Посмеялся и поплакал')
 window.geometry('1080x720') 
-l=Label(window,text=x, font=('Comic Sans MS', 10))
+l=Label(window,text=x, font=('Comic Sans MS', 15))
 #l.pack()
 l.grid(column=0,row = 1)
 
