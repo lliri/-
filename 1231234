@@ -1,3 +1,15 @@
+from tkinter import*
+from tkinter.ttk import Radiobutton
+import random
+import time
+x=random.randint(1,12)
+window = Tk()
+window.title('Посмеялся и поплакал')
+window.geometry('1080x720')
+l=Label(window,text=x, font=('Comic Sans MS', 15))
+l.grid(column=0,row = 1)
+#window.mainloop()
+#l.pack()
 
 
 while True:
