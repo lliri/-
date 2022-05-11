@@ -9,9 +9,12 @@ def get_text_messages(message):
         x=teleani.givc()
         bot.send_message(message.from_user.id, x)
     elif message.text == "Привет":
-        bot.send_message(message.from_user.id, "Привет, чем я могу тебе помочь?")
+        bot.send_message(message.from_user.id, "Привет, я пока мало, что умею, но мой ассортимент будет увеличиваться, и чтобы узнать что я могу на данный момент напиши /help")
     elif message.text == "/help":
-        bot.send_message(message.from_user.id, "Напиши привет или напиши расскажи аникдот")
+        bot.send_message(message.from_user.id, "Напиши привет или напиши расскажи анекдот")
     else:
         bot.send_message(message.from_user.id, "напиши /help")
+        zz=open('bot.txt', 'a')
+        zz.write(message.text)
+        zz.close()
 bot.polling(none_stop=True, interval=0)
