@@ -31,7 +31,7 @@ def get_text_messages(message):
     if message.text != mesage:
         mesage=message.text
         zx=open('save.txt','w')
-        zx.write(message.text)
+        zx.write(message.from_user.id)
         zx.close()
         mesage=message.text
         #print(message.text)
